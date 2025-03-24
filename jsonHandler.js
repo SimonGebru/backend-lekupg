@@ -1,4 +1,4 @@
-const fs = require ('fs');
+/*const fs = require ('fs');
 const path = require ('path');
 
 function readJsonFile(fileName) {
@@ -13,4 +13,29 @@ function readJsonFile(fileName) {
         fs.writeFileSync(filePath, dataToWrite, 'utf8');
         }
 
-        module.exports = { readJsonFile, writeJsonFile };
+        module.exports = { readJsonFile, writeJsonFile };*/
+
+const fs = require('fs');
+const path = require('path');
+
+const filePath = path.join(__dirname, 'data1.json');
+ function readJsonFile () {
+    try {
+        const data = fs.readFileSync(filePath, 'utf-8');
+        return JSON.parse(data);
+        } catch (error) {
+            console.error('Error reading file:', error);
+            return null;
+            }
+            }
+
+function writeJsonFile (newData) {
+    try {
+        const jsonString = JSON.stringify(newData, null, 2);
+        fs.writeFileSync(filePath, jsonString, 'utf-8');
+        } catch (error) {
+            console.error('Error writing file:', error);
+            }
+            }
+            module.exports = { readJsonFile, writeJsonFile };
+            

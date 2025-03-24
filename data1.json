@@ -1,4 +1,4 @@
 {
-  "message": "Hej från JSON!",
-  "version": 1.0
+  "message": "Hejsan från Node!",
+  "version": 4
 }
