@@ -1,2 +1,4 @@
 [3/24/2025, 10:13:08 AM] Programmet startade
 [3/24/2025, 10:13:08 AM] Användare Simon loggade in
+2025-03-27T10:21:26.451Z - App startades
+2025-03-27T10:21:26.459Z - En användare loggade in

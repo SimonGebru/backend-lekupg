@@ -23,9 +23,47 @@ writeFile (filename, content);
 const result = readFile(filename);
 console.log(result);*/
 
-const config = require('./config');
+/*const config = require('./config');
 
-console.log (`App: ${config.appName}, Version: ${config.version}, Körs på port: ${config.port}`);
+console.log (`App: ${config.appName}, Version: ${config.version}, Körs på port: ${config.port}`);*/
+
+/*const logMessage = require('./logger');
+
+logMessage ('App startades');
+logMessage ('En användare loggade in');*/
+
+/*const { saveUser, getUsers } = require('./database');
+
+saveUser ('John Doe');
+saveUser ('Jane Doe');
+
+console.log('Registrerade användare:', getUsers());*/
+
+const fs = require('fs');
+const path = require('path');
+const readline = require('readline-sync');
+
+const filePath = path.join(__dirname, 'notes.txt');
+
+let continueWriting = true;
+
+while (continueWriting) {
+  const note = readline.question('Skriv en anteckning: ');
+
+  const timestamp = new Date().toLocaleString();
+  const logEntry = `[${timestamp}] ${note}\n`;
+
+  fs.appendFileSync(filePath, logEntry);
+  console.log('✔️ Anteckningen sparades!\n');
+
+  const svar = readline.question('Vill du skriva en till? (j/n): ');
+  if (svar.toLowerCase() !== 'j') {
+    continueWriting = false;
+    console.log('\n👋 Tack för att du använde anteckningsappen!');
+  }
+}
+
+
 
 
 
