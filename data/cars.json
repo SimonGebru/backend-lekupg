@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "type": "Bil",
+    "color": "Röd",
+    "brand": "Volvo"
+  },
+  {
+    "id": 2,
+    "type": "Bil",
+    "color": "Blå",
+    "brand": "BMW"
+  },
+  {
+    "id": 3,
+    "type": "Bil",
+    "color": "Silver",
+    "brand": "Audi"
+  },
+  {
+    "id": 4,
+    "type": "Bil",
+    "color": "Svart",
+    "brand": "Toyota"
+  },
+  {
+    "id": 5,
+    "type": "Bil",
+    "color": "Gul",
+    "brand": "Ford"
+  }
+]

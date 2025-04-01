@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "type": "Hund",
+    "name": "Labrador Retriever"
+  },
+  {
+    "id": 2,
+    "type": "Hund",
+    "name": "Schäfer"
+  },
+  {
+    "id": 3,
+    "type": "Hund",
+    "name": "Golden Retriever"
+  },
+  {
+    "id": 4,
+    "type": "Hund",
+    "name": "Fransk Bulldog"
+  },
+  {
+    "id": 5,
+    "type": "Hund",
+    "name": "Chihuahua"
+  }
+]
