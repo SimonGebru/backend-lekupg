@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Simon",
+    "email": "simon@folkuniversitetet.se"
+  },
+  {
+    "id": 2,
+    "name": "Henrik",
+    "email": "henrik@folkuniversitetet.se"
+  },
+  {
+    "id": 3,
+    "name": "Pontus",
+    "email": "poppe@folkuniversitetet.se"
+  },
+  {
+    "id": 4,
+    "name": "Edvin",
+    "email": "edvin@folkuniversitetet.se"
+  }
+]

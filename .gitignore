@@ -1,0 +1,14 @@
+# Ignorera node_modules (ska aldrig pushas)
+node_modules/
+
+# Ignorera miljövariabler
+.env
+
+# Ignorera loggfiler
+*.log
+
+# Ignorera systemfiler från macOS
+.DS_Store
+
+# Ignorera cache från VS Code
+.vscode/

@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "bookId": 2,
+    "loanDate": "2025-04-06T20:36:07.233Z",
+    "returned": true
+  }
+]

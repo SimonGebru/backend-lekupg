@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Sagan om Ringen",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "available": true
+  },
+  {
+    "id": 2,
+    "title": "Harry Potter och Fenixorden",
+    "author": "J.K. Rowling",
+    "genre": "Fantasy",
+    "available": false
+  },
+  {
+    "id": 3,
+    "title": "I Know Why the Caged Bird Sings",
+    "author": "Maya Angelou",
+    "genre": "Självbiografi",
+    "available": true
+  },
+  {
+    "id": 4,
+    "title": "Moment 22",
+    "author": "Joseph Heller",
+    "genre": "Satir",
+    "available": true
+  },
+  {
+    "id": 5,
+    "title": "Systrarna",
+    "author": "Daisy Johnson",
+    "genre": "Psykologisk thriller",
+    "available": true
+  }
+]
