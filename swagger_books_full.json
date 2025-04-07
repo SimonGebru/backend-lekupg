@@ -1,0 +1,160 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Bokl\u00e5nssystem API",
+    "version": "1.0.0",
+    "description": "API f\u00f6r att hantera b\u00f6cker, anv\u00e4ndare och l\u00e5n i ett enkelt bibliotekssystem"
+  },
+  "paths": {
+    "/api/books": {
+      "get": {
+        "summary": "H\u00e4mta alla b\u00f6cker",
+        "responses": {
+          "200": {
+            "description": "En lista med alla b\u00f6cker"
+          }
+        }
+      },
+      "post": {
+        "summary": "L\u00e4gg till en ny bok",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "example": {
+                "title": "Sagan om Ringen",
+                "author": "J.R.R. Tolkien",
+                "genre": "Fantasy"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Boken har lagts till"
+          },
+          "400": {
+            "description": "Fel i inmatningen"
+          }
+        }
+      }
+    },
+    "/api/books/borrowed": {
+      "get": {
+        "summary": "H\u00e4mta alla utl\u00e5nade b\u00f6cker",
+        "responses": {
+          "200": {
+            "description": "Lista med b\u00f6cker d\u00e4r available \u00e4r false"
+          }
+        }
+      }
+    },
+    "/api/users": {
+      "get": {
+        "summary": "H\u00e4mta alla anv\u00e4ndare",
+        "responses": {
+          "200": {
+            "description": "En lista med alla anv\u00e4ndare"
+          }
+        }
+      },
+      "post": {
+        "summary": "Skapa en ny anv\u00e4ndare",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "example": {
+                "name": "Simon",
+                "email": "simon@folkuniversitetet.se"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Anv\u00e4ndare skapad"
+          },
+          "400": {
+            "description": "Namn och e-post kr\u00e4vs"
+          }
+        }
+      }
+    },
+    "/api/users/{id}/loans": {
+      "get": {
+        "summary": "Visa alla l\u00e5n f\u00f6r en viss anv\u00e4ndare",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista med anv\u00e4ndarens l\u00e5n"
+          }
+        }
+      }
+    },
+    "/api/loans": {
+      "get": {
+        "summary": "H\u00e4mta alla l\u00e5n",
+        "responses": {
+          "200": {
+            "description": "En lista med alla l\u00e5n"
+          }
+        }
+      },
+      "post": {
+        "summary": "Skapa ett nytt l\u00e5n",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "example": {
+                "userId": 1,
+                "bookId": 2
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "L\u00e5net har skapats"
+          },
+          "400": {
+            "description": "Boken \u00e4r redan utl\u00e5nad eller felaktiga data"
+          }
+        }
+      }
+    },
+    "/api/loans/{id}/return": {
+      "patch": {
+        "summary": "\u00c5terl\u00e4mna en bok",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Boken \u00e4r \u00e5terl\u00e4mnad"
+          },
+          "404": {
+            "description": "L\u00e5net kunde inte hittas"
+          }
+        }
+      }
+    }
+  }
+}

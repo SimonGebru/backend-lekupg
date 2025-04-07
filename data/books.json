@@ -33,5 +33,26 @@
     "author": "Daisy Johnson",
     "genre": "Psykologisk thriller",
     "available": true
+  },
+  {
+    "id": 6,
+    "title": "Cirkeln",
+    "author": "Mats Strandberg & Sara Elfgren",
+    "genre": "Fantasy",
+    "available": true
+  },
+  {
+    "id": 7,
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "genre": "Science Fiction",
+    "available": true
+  },
+  {
+    "id": 8,
+    "title": "Metro 2033",
+    "author": "Dmitry Glukhovsky",
+    "genre": "Postapokalyptisk",
+    "available": true
   }
 ]
